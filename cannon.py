@@ -22,6 +22,8 @@ def tap(x, y):
         #Determina la velocidad del proyectil según las coordenadas donde se generaron los clics
         speed.x = (x + 200) / 25
         speed.y = (y + 200) / 25
+        speed.x = (x + 200) / 15
+        speed.y = (y + 200) / 15
 
 #Función para determinar si un objeto se encuentra en pantalla o no, usado tanto proyectil como objetvos
 def inside(xy):
@@ -78,7 +80,7 @@ def move():
         if not inside(target):
             target = vector(200,y)
 
-    ontimer(move, 50)
+    ontimer(move, 30)
 
 #Genera la pantalla gráfica
 setup(420, 420, 370, 0)
